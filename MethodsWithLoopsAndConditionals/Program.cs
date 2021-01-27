@@ -6,16 +6,17 @@ namespace MethodsWithLoopsAndConditionals
     {
         static void Main(string[] args)
         {
-            //AllThousand();
-            //ThreePiece();
-            //AreEqual();
-            //EvenOrOdd();
-            //PosOrNeg();
-            //CanYouVote();
+            AllThousand();
+            ThreePiece();
+            AreEqual();
+            EvenOrOdd();
+            PosOrNeg();
+            CanYouVote();
             TenToTen();
+            TimesTable();
         }
         //LukeWarm Section
-        /*
+        
         //Write a method that will print to the console all numbers 1000 through -1000.
         static void AllThousand()
         {
@@ -147,7 +148,7 @@ namespace MethodsWithLoopsAndConditionals
             
         }
         
-        */
+        
         //Heatin Up Section
 
         //Write a method to check if an integer(from the user) is in the range -10 to 10.
@@ -184,7 +185,34 @@ namespace MethodsWithLoopsAndConditionals
             }
 
         }
+
         //Write a method to display the multiplication table(from 1 to 12) of a given integer.
-        ($"{multArray}")
+        static void TimesTable()
+        {
+            for (int i = 1; i < 2;)
+            {
+                Console.WriteLine("Input an integer: ");
+
+                var a = Console.ReadLine();
+                int intA;
+                bool success = Int32.TryParse(a, out intA);
+                if (success)
+                {
+                    for (int x = 1; x <= 12; x++)
+                    {
+                        int sum = x * intA;
+                        Console.WriteLine($"{intA} * {x} = {sum}");
+
+                    }
+                    i++;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input, try again");
+                }
+
+            }
+
+        }
     }
 }
